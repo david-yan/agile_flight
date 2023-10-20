@@ -50,7 +50,7 @@ do
   cd -
 
   sleep 2.0
-  rostopic pub /kingfisher/start_navigation std_msgs/Empty "{}" --once
+  # rostopic pub /kingfisher/start_navigation std_msgs/Empty "{}" --once
 
   # Wait until the evaluation script has finished
   while ps -p $PY_PID > /dev/null

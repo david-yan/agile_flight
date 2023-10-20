@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+#!/usr/bin/python
 import argparse
 
 import rospy
@@ -10,7 +10,7 @@ from sensor_msgs.msg import Image
 from std_msgs.msg import Empty
 
 from envsim_msgs.msg import ObstacleArray
-from rl_example import load_rl_policy
+# from rl_example import load_rl_policy
 from user_code import compute_command_vision_based, compute_command_state_based
 from utils import AgileCommandMode, AgileQuadState
 
@@ -22,8 +22,8 @@ class AgilePilotNode:
 
         self.vision_based = vision_based
         self.rl_policy = None
-        if ppo_path is not None:
-            self.rl_policy = load_rl_policy(ppo_path)
+        # if ppo_path is not None:
+        #     self.rl_policy = load_rl_policy(ppo_path)
         self.publish_commands = False
         self.cv_bridge = CvBridge()
         self.state = None

@@ -3,7 +3,7 @@
 
 from pickle import NONE
 from utils import AgileCommandMode, AgileCommand
-from rl_example import rl_example
+# from rl_example import rl_example
 
 
 def compute_command_vision_based(state, img):
